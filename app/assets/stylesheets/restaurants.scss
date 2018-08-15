@@ -1,0 +1,21 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.row {
+  display: flex;
+}
+
+.box {
+  justify-content: between;
+}
+
+// .container {
+//   text-align: center;
+// }
+#check_box {
+  text-align: beginning;
+}
+
+.container {
+  text-align: center;
+}

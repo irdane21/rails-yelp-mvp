@@ -1,0 +1,42 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <hr>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+  <div class= "row">
+    <div class= "col-xs-4">
+      <div class="box">
+        <%= link_to "Edit the restaurant", edit_restaurant_path(@restaurant),
+            class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="box">
+        <%= link_to "Return to the list", restaurants_path,
+          class: 'btn btn-primary'
+        %>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="box">
+        <%= link_to "Create a review", new_restaurant_review_path(@restaurant, @review),
+          class: 'btn btn-success'
+        %>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <h2>This is the restaurant's reviews</h2>
+    <ul>
+      <% @restaurant.reviews.each do |review| %>
+      <li>
+        <%= review.rating %>
+        <%= review.content %>
+
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
